@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Web con formulario</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo"><img src="img/logo01.png" /></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown"><a href="ropa.html">Ropa</a>
+                    <div class="dropdown-content">
+                        <a href="mujer.html">Mujer</a>
+                        <a href="hombre.html">Hombre</a>
+                        <a href="nino.html">Niños</a>
+                    </div>
+                </li>
+                <li><a href="complementos.html">Complementos</a></li>
+                <li><a href="tallas-grandes.html">Tallas grandes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+        <h1>Contacto</h1>
+
+        <section class="contactForm">
+            <form action="">
+                <div class="fila">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="entradas" name="nombre" id="nombre" pattern="[A-Za-záéíóúÁÉÍÓÚ] *" maxlength="30" required>
+                </div>
+                <div class="fila">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" class="entradas" name="apellidos" id="apellidos" pattern="[A-Za-záéíóúÁÉÍÓÚ] *" maxlength="30" required>
+                </div>
+                <div class="fila">
+                    <label for="Email">e mail</label>
+                    <input type="email" class="entradas" name="email" id="email" required>
+                </div>
+                <div class="fila">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" class="entradas" name="telefono" id="telefono" required>
+                </div>
+                <div class="fila">
+                    <label for="mensaje"></label>
+                    <textarea class="entradas" name="mensaje" id="mensaje" placeholder="mensaje"></textarea>
+                </div>
+                <div class="fila">
+                    <label for="news">Newsletter</label>
+                    <input type="checkbox" class="entradas" name="news" id="news">
+                </div>
+                <div class="fila">
+
+                    <label for="male">Male</label>
+                    <input type="radio" class="entradas" id="male" name="gender" value="male">
+
+                    <label for="female">Female</label>
+                    <input type="radio" class="entradas" id="female" name="gender" value="female">
+
+                    <label for="other">Other</label>
+                    <input type="radio" class="entradas" id="other" name="gender" value="other">
+
+                </div>
+
+                <div class="fila"><label for="tipoMensaje">Tipo de mensaje</label>
+                    <select name="tipoMensaje" class="entradas" id="tipoMensaje">
+                        <option value="0"></option>
+                        <option value="1">devoluciones</option>
+                        <option value="2">consultas</option>
+                        <option value="3">tallas</option>
+                    </select>
+                </div>
+                <div class="fila">
+                    <div id="botonesBuscar" class="fila">
+                        <input type="submit" class="entradas" value="enviar" />
+                        <input type="reset" class="entradas" value="limpiar" />
+                    </div>
+            </form>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="legal">
+            <ul>
+                <li>cookies</li>
+                <li>política de privacidad</li>
+                <li>opciones de compra</li>
+            </ul>
+        </div>
+        <div class="icon-bar">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+        <div class="help">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga expedita molestias perspiciatis odit.</p>
+            <ul>
+                <li>ayuda</li>
+                <li>Formas de pago</li>
+                <li>F.A.Q.</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

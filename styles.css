@@ -1,0 +1,316 @@
+:root {
+    --main-05: #e53935;
+    --main-04: #f44336;
+    --main-03: #ef5350;
+    --main-02: #ef9a9a;
+    --main-01: #ffcdd2;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+#logo {
+    width: 60%;
+    margin-left: 20%
+}
+
+nav ul li,
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li a {
+    text-decoration: none;
+    padding: 12px 16px;
+}
+
+nav ul li {
+    text-decoration: none;
+    float: left;
+    background-color: var(--main-03);
+    color: var(--main-01)
+}
+
+nav {
+    display: flex;
+}
+
+main h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    background-color: var(--main-03);
+}
+
+.content {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: var(--main-01);
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/*** quitar el display-block para que aparezca en horizontal ***/
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    /* *****************  */
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    margin-left: 80px;
+}
+
+.contactForm label {
+    display: inline-block;
+    width: 30%;
+    margin-left: 20%;
+    padding: 4px;
+}
+
+textarea {
+    margin-left: 25%;
+    width: 60%;
+}
+
+.contactForm {
+    background-color: var(--main-01);
+    width: 50%;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#botonesBuscar {
+    margin-top: 2%;
+    margin-left: 30%;
+}
+
+
+/**** FOOTER ********/
+
+footer {
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(202, 87, 87);
+    color: white;
+    text-align: center;
+}
+
+.legal {
+    font-size: 10px;
+    display: flex;
+    margin-left: 1%;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.help {
+    font-size: 10px;
+    margin-left: 25%;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+
+/***** SOCIAL *******/
+
+.icon-bar {
+    display: flex;
+    margin-top: 2%;
+    margin-left: 30%;
+    height: 50%;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.instagram {
+    background: #dd4b39;
+    color: white;
+}
+
+
+/* ******* TABLA RESULTADOS ********/
+
+table {
+    margin-left: 10%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.iconAction img {
+    width: 20px;
+    margin: 5px;
+}
+
+
+/* The Modal (background) */
+
+.modal-contenido {
+    background-color: aqua;
+    width: 300px;
+    padding: 10px 20px;
+    margin: 20% auto;
+    position: relative;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, .8);
+    padding: 10%;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    bottom: 30%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.modal table {
+    background-color: var(--main-02);
+}
+
+#buscarProducto a {
+    color: white;
+}
+
+#buscarProducto:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#miModalBuscar:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#miModalMujer:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#miModalHombre:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#miModalNino:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#miModalEliminar:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal .modal-dialog-aside {
+    width: 350px;
+    max-width: 80%;
+    height: 100%;
+    margin: 0;
+    transform: translate(0);
+    transition: transform .2s;
+}
+
+.modal .modal-dialog-aside .modal-content {
+    height: inherit;
+    border: 0;
+    border-radius: 0;
+}
+
+.modal .modal-dialog-aside .modal-content .modal-body {
+    overflow-y: auto
+}
+
+.modal.fixed-left .modal-dialog-aside {
+    margin-left: auto;
+    transform: translateX(100%);
+}
+
+.modal.fixed-right .modal-dialog-aside {
+    margin-right: auto;
+    transform: translateX(-100%);
+}
+
+.modal.show .modal-dialog-aside {
+    transform: translateX(0);
+}

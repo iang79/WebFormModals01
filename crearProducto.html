@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web con formulario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo"><img src="img/logo01.png" /></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown"><a href="ropa.html">Ropa</a>
+                    <div class="dropdown-content">
+                        <a href="mujer.html">Mujer</a>
+                        <a href="hombre.html">Hombre</a>
+                        <a href="nino.html">Niños</a>
+                    </div>
+                </li>
+                <li><a href="complementos.html">Complementos</a></li>
+                <li><a href="tallas-grandes.html">Tallas grandes</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+        <h1>CRUD</h1>
+
+        <!-- Trigger/Open The Modal -->
+        <ul>
+            <li><a href="#miModalBuscar">Buscar</a></li>
+            <li class="dropdown"><a href="#miModalMujer">Crear</a>
+                <div class="dropdown-content">
+                    <a href="#miModalMujer">Crear Ropa Mujer</a>
+                    <a href="#miModalHombre">Crear Ropa Hombre</a>
+                    <a href="#miModalNino">Crear Ropa Niño</a>
+                </div>
+            </li>
+
+        </ul>
+
+        <div id="miModalBuscar" class="modal">
+
+            <section class="contactForm">
+
+                <form action="">
+                    <div class="fila">
+                        <label for="referencia">Referencia</label>
+                        <input type="text" class="entradas" name="referencia" id="referencia" maxlength="30" placeholder="00001" required>
+                    </div>
+                    <div class="fila">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="entradas" name="nombre" id="nombre" maxlength="30" placeholder="Austria" required>
+                    </div>
+                    <div class="fila"><label for="tipo">Tipo</label>
+                        <select name="tipo" class="entradas" id="tipo">
+                            <option value="0"></option>
+                            <option value="1">Mujer</option>
+                            <option value="2">Hombre</option>
+                            <option value="3">Otro</option>
+                        </select>
+                    </div>
+                    <div class="fila">
+                        <label for="categoria">Categoria</label>
+                        <input type="text" class="entradas" name="categoria" id="categoria" placeholder="Gala" required>
+                    </div>
+                    <div class="fila">
+                        <label for="precio">Precio</label>
+                        <input type="text" class="entradas" name="precio" id="precio" placeholder="34 €">
+                    </div>
+                    <div class="fila">
+                        <label for="color">Color</label>
+                        <input type="text" class="entradas" name="color" id="color" placeholder="Rojo">
+                    </div>
+                    <div class="fila">
+                        <label for="material">Material</label>
+                        <input type="text" class="entradas" name="material" id="material" placeholder="Tela">
+                    </div>
+
+                    <div class="fila">
+                        <div id="botonesBuscar" class="fila">
+                            <a href="#">cerrar</a>
+                            <input type="submit" class="entradas" value="enviar" />
+                            <input type="reset" class="entradas" value="limpiar">
+                            <a href="#buscarProducto">buscar</a>
+
+
+                        </div>
+                </form>
+
+            </section>
+            </div>
+
+            <div id="miModalMujer" class="modal">
+
+                <section class="contactForm">
+
+
+                    <form action="">
+                        <div class="fila">
+                            <label for="referencia">Referencia</label>
+                            <input type="text" class="entradas" name="referencia" id="referencia" maxlength="30" placeholder="00001" required>
+                        </div>
+                        <div class="fila">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="entradas" name="nombre" id="nombre" maxlength="30" placeholder="Austria" required>
+                        </div>
+                        <div class="fila"><label for="tipo">Tipo</label>
+                            <select name="tipo" class="entradas" id="tipo">
+                                <option value="0"></option>
+                                <option value="1">Mujer</option>
+                                <option value="2">Hombre</option>
+                                <option value="3">Otro</option>
+                            </select>
+                        </div>
+                        <div class="fila">
+                            <label for="categoria">Categoria</label>
+                            <input type="text" class="entradas" name="categoria" id="categoria" placeholder="Gala" required>
+                        </div>
+                        <div class="fila">
+                            <label for="precio">Precio</label>
+                            <input type="text" class="entradas" name="precio" id="precio" placeholder="34 €">
+                        </div>
+                        <div class="fila">
+                            <label for="color">Color</label>
+                            <input type="text" class="entradas" name="color" id="color" placeholder="Rojo">
+                        </div>
+                        <div class="fila">
+                            <label for="material">Material</label>
+                            <input type="text" class="entradas" name="material" id="material" placeholder="Tela">
+                        </div>
+
+                        <div class="fila">
+                            <div id="botonesBuscar" class="fila">
+                                <a href="#">cerrar</a>
+                                <input type="submit" class="entradas" value="enviar" />
+                                <input type="reset" class="entradas" value="limpiar">
+
+
+                            </div>
+                    </form>
+
+                </section>
+                </div>
+
+
+                <div id="miModalHombre" class="modal">
+
+                    <section class="contactForm">
+
+
+                        <form action="">
+                            <div class="fila">
+                                <label for="referencia">Referencia</label>
+                                <input type="text" class="entradas" name="referencia" id="referencia" maxlength="30" placeholder="00001" required>
+                            </div>
+                            <div class="fila">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="entradas" name="nombre" id="nombre" maxlength="30" placeholder="Austria" required>
+                            </div>
+                            <div class="fila"><label for="tipo">Tipo</label>
+                                <select name="tipo" class="entradas" id="tipo">
+                                    <option value="0"></option>
+                                    <option value="1">Mujer</option>
+                                    <option value="2">Hombre</option>
+                                    <option value="3">Otro</option>
+                                </select>
+                            </div>
+                            <div class="fila">
+                                <label for="categoria">Categoria</label>
+                                <input type="text" class="entradas" name="categoria" id="categoria" placeholder="Gala" required>
+                            </div>
+                            <div class="fila">
+                                <label for="precio">Precio</label>
+                                <input type="text" class="entradas" name="precio" id="precio" placeholder="34 €">
+                            </div>
+                            <div class="fila">
+                                <label for="color">Color</label>
+                                <input type="text" class="entradas" name="color" id="color" placeholder="Rojo">
+                            </div>
+                            <div class="fila">
+                                <label for="material">Material</label>
+                                <input type="text" class="entradas" name="material" id="material" placeholder="Tela">
+                            </div>
+
+                            <div class="fila">
+                                <div id="botonesBuscar" class="fila">
+                                    <a href="#">cerrar</a>
+                                    <input type="submit" class="entradas" value="enviar" />
+                                    <input type="reset" class="entradas" value="limpiar">
+
+
+                                </div>
+                        </form>
+
+                    </section>
+                    </div>
+
+
+                    <div id="miModalNino" class="modal">
+
+                        <section class="contactForm">
+
+
+                            <form action="">
+                                <div class="fila">
+                                    <label for="referencia">Referencia</label>
+                                    <input type="text" class="entradas" name="referencia" id="referencia" maxlength="30" placeholder="00001" required>
+                                </div>
+                                <div class="fila">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="entradas" name="nombre" id="nombre" maxlength="30" placeholder="Austria" required>
+                                </div>
+                                <div class="fila"><label for="tipo">Tipo</label>
+                                    <select name="tipo" class="entradas" id="tipo">
+                                        <option value="0"></option>
+                                        <option value="1">Mujer</option>
+                                        <option value="2">Hombre</option>
+                                        <option value="3">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="fila">
+                                    <label for="categoria">Categoria</label>
+                                    <input type="text" class="entradas" name="categoria" id="categoria" placeholder="Gala" required>
+                                </div>
+                                <div class="fila">
+                                    <label for="precio">Precio</label>
+                                    <input type="text" class="entradas" name="precio" id="precio" placeholder="34 €">
+                                </div>
+                                <div class="fila">
+                                    <label for="color">Color</label>
+                                    <input type="text" class="entradas" name="color" id="color" placeholder="Rojo">
+                                </div>
+                                <div class="fila">
+                                    <label for="material">Material</label>
+                                    <input type="text" class="entradas" name="material" id="material" placeholder="Tela">
+                                </div>
+
+                                <div class="fila">
+                                    <div id="botonesBuscar" class="fila">
+                                        <a href="#">cerrar</a>
+                                        <input type="submit" class="entradas" value="enviar" />
+                                        <input type="reset" class="entradas" value="limpiar">
+
+
+                                    </div>
+                            </form>
+
+                        </section>
+                        </div>
+
+                        <div id="miModalEliminar" class="modal">
+                            <h1>Desea eliminar el producto?<a href="#">cerrar</a></h1>
+                        </div>
+
+                        <div id="buscarProducto" class="modal">
+                            <a href="#">cerrar</a>
+                            <table>
+                                <tr>
+                                    <th><span title="Todos"><input type="checkbox" onClick="toggle(this)"></span></th>
+                                    <th>Referencia</th>
+                                    <th>Nombre</th>
+                                    <th>Tipo</th>
+                                    <th>Categoria</th>
+                                    <th>Precio</th>
+                                    <th>Color</th>
+                                    <th>Material</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>00001</td>
+                                    <td>Germany</td>
+                                    <td>Mujer</td>
+                                    <td>Gala</td>
+                                    <td>24 €</td>
+                                    <td>Germany</td>
+                                    <td>Germany</td>
+                                    <td>
+                                        <div class="iconAction">
+                                            <a href="#miModalNino"><img src="img/iconEdit.png"></a>
+                                            <a href="#miModalEliminar"><img src="img/iconTrash.png"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>00002</td>
+                                    <td>Mexico</td>
+                                    <td>Hombre</td>
+                                    <td>Sport</td>
+                                    <td>32 €</td>
+                                    <td>Mexico</td>
+                                    <td>Mexico</td>
+                                    <td>
+                                        <div class="iconAction">
+                                            <a href="#miModalNino"><img src="img/iconEdit.png"></a>
+                                            <a href="#miModalEliminar"><img src="img/iconTrash.png"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>00003</td>
+                                    <td>Austria</td>
+                                    <td>Mujer</td>
+                                    <td>Casual</td>
+                                    <td>26 €</td>
+                                    <td>Ernst Handel</td>
+                                    <td>Roland Mendel</td>
+                                    <td>
+                                        <div class="iconAction">
+                                            <a href="#miModalNino"><img src="img/iconEdit.png"></a>
+                                            <a href="#miModalEliminar"><img src="img/iconTrash.png"></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>00004</td>
+                                    <td>UK</td>
+                                    <td>Hombre</td>
+                                    <td>Sport</td>
+                                    <td>45 €</td>
+                                    <td>Island Trading</td>
+                                    <td>Helen Bennett</td>
+                                    <td>
+                                        <div class="iconAction">
+                                            <a href="#miModalNino"><img src="img/iconEdit.png"></a>
+                                            <a href="#miModalEliminar"><img src="img/iconTrash.png"></a>
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+    </main>
+
+    <footer>
+        <div class="legal">
+            <ul>
+                <li>cookies</li>
+                <li>política de privacidad</li>
+                <li>opciones de compra</li>
+            </ul>
+        </div>
+        <div class="icon-bar">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+        <div class="help">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga expedita molestias perspiciatis odit.</p>
+            <ul>
+                <li>ayuda</li>
+                <li>Formas de pago</li>
+                <li>F.A.Q.</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+
+</html>
